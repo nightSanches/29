@@ -18,9 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="Pages\Users\Elements\" />
-    <Folder Include="Pages\Clubs\Elements\" />
   </ItemGroup>
 
 </Project>
