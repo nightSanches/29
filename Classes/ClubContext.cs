@@ -12,7 +12,7 @@ namespace pr29savichev.Classes
     public class ClubContext : DbContext
     {
         public DbSet<Clubs> Clubs { get; set; }
-        public ClubsContext() => Database.EnsureCreated();
+        public ClubContext() => Database.EnsureCreated();
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseMySql(Config.ConnectionConfig, Config.Version);
     }
 }

@@ -15,21 +15,21 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
 
-namespace pr29savichev.Pages.Clubs
+namespace pr29savichev.Pages.Users
 {
     /// <summary>
     /// Логика взаимодействия для Main.xaml
     /// </summary>
     public partial class Main : Page
     {
-        public ClubContext AllClub = new ClubContext();
+        public UserContext AllUsers = new UserContext();
         public Main()
         {
             InitializeComponent();
-            foreach (Models.Clubs Club in AllClub.Clubs)
-                parent.Children.Add(new Elements.Item(Club, this));
+            foreach (Models.Users User in AllUsers.Users)
+                parent.Children.Add(new Elements.Item(User, this));
         }
 
-        private void AddClub(object sender, RoutedEventArgs e) => MainWindow.init.OpenPages(new Pages.Clubs.Add(this));
+        private void AddUser(object sender, RoutedEventArgs e) => MainWindow.init.OpenPages(new Pages.Users.Add(this));
     }
 }
